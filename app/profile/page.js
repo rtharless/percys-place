@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import BottomNav from "@/components/wireframe/BottomNav";
-import { List, ListItem } from "@/components/wireframe/List";
+import { ListItem } from "@/components/wireframe/List";
 import Note from "@/components/wireframe/Note";
 import Phone from "@/components/wireframe/Phone";
 import Row from "@/components/wireframe/Row";
@@ -21,20 +21,18 @@ export default function ProfilePage() {
         </Row>
 
         <Row title="Settings List">
-          <List>
-            <ListItem>
-              <Link href="/profile/preferences">Preferences</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/profile/saved-trips">Saved Trips</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/profile/payment-methods">Payment Methods</Link>
-            </ListItem>
-            <ListItem>
-              <Link href="/profile/support">Support &amp; Feedback</Link>
-            </ListItem>
-          </List>
+          <ListItem>
+            <Link href="/profile/preferences">Preferences</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="/profile/saved-trips">Saved Trips</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="/profile/payment-methods">Payment Methods</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="/profile/support">Support &amp; Feedback</Link>
+          </ListItem>
         </Row>
 
         <BottomNav activeHref="/profile" />

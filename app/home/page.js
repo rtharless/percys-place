@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PercysLogoMark } from "@/components/brand/PercysLogo";
 import BottomNav from "@/components/wireframe/BottomNav";
 import CTA from "@/components/wireframe/CTA";
+import MapPreview from "@/components/wireframe/MapPreview";
 import Phone from "@/components/wireframe/Phone";
 import Pill from "@/components/wireframe/Pill";
 import Row from "@/components/wireframe/Row";
@@ -32,7 +33,21 @@ export default function HomeDashboardPage() {
             <CTA>
               <Link href="/plan">Build my adventure</Link>
             </CTA>
+
+            <div className="-mt-1 text-xs text-slate-600">You’ve discovered 1,240 places so far.</div>
         </div>
+
+        <Row title="Today’s route">
+          <div className="text-sm text-slate-700">Austin → Marfa</div>
+          <div className="mt-3">
+            <MapPreview height={140} />
+          </div>
+          <div className="mt-3">
+            <Link href="/plan/map" className="text-xs font-semibold text-slate-700">
+              Open route
+            </Link>
+          </div>
+        </Row>
 
         <Row title="Featured journeys">
           <div className="text-sm text-slate-700">

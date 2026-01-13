@@ -2,8 +2,10 @@ import Link from "next/link";
 
 import BottomNav from "@/components/wireframe/BottomNav";
 import { ListItem } from "@/components/wireframe/List";
+import MapPreview from "@/components/wireframe/MapPreview";
 import Note from "@/components/wireframe/Note";
 import Phone from "@/components/wireframe/Phone";
+import Pill from "@/components/wireframe/Pill";
 import Row from "@/components/wireframe/Row";
 import TopBar from "@/components/wireframe/TopBar";
 
@@ -14,6 +16,19 @@ export default function ExploreNearbyPage() {
 
       <Phone>
         <TopBar left={<Link href="/home">Back</Link>} title="Explore Nearby" />
+
+        <Row title="Map">
+          <div className="text-sm text-slate-700">Along your route to Marfa</div>
+          <div className="mt-2 text-xs text-slate-500">A calm, route-first view.</div>
+          <div className="mt-3">
+            <MapPreview height={220} />
+          </div>
+          <div className="mt-3">
+            <Pill>Quiet views</Pill>
+            <Pill>Local flavors</Pill>
+            <Pill>Hidden finds</Pill>
+          </div>
+        </Row>
 
         <Row title="Near you">
           <div className="text-sm text-slate-700">Along your route to Marfa</div>
