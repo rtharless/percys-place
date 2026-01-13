@@ -20,6 +20,17 @@ export default function ExploreNearbyPage() {
           <div className="mt-1 text-xs text-slate-500">Curated, finite list. No doom-scroll.</div>
         </Row>
 
+        <Row title="Historic markers">
+          <div className="rounded-2xl border border-white/50 bg-white/60 px-3 py-3 text-xs text-slate-700 shadow-sm backdrop-blur">
+            <div className="font-semibold text-slate-900">Little stories along the way</div>
+            <div className="mt-1 text-slate-600">
+              Percy can surface historic markers on your route–what you saw, what you almost passed,
+              and what you might want to loop back for.
+            </div>
+            <div className="mt-2 text-slate-600">[No data yet–this is a future signal.]</div>
+          </div>
+        </Row>
+
         <Row title="Experience Cards (curated)">
           <ListItem>
             <div className="font-semibold">Scenic Overlook</div>

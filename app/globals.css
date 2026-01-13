@@ -8,11 +8,13 @@ body {
 }
 
 body {
-  background: radial-gradient(1200px 600px at 20% 0%, rgba(29, 78, 216, 0.18), transparent 60%),
-    radial-gradient(900px 500px at 90% 10%, rgba(220, 38, 38, 0.14), transparent 55%),
-    linear-gradient(to bottom, #ffffff, #f1f5f9);
+  background:
+    radial-gradient(900px 520px at 18% 0%, rgba(60, 130, 190, 0.14), transparent 62%),
+    radial-gradient(800px 520px at 88% 8%, rgba(240, 164, 96, 0.14), transparent 58%),
+    radial-gradient(900px 560px at 60% 92%, rgba(231, 111, 81, 0.10), transparent 62%),
+    linear-gradient(to bottom, #fffdf7, #f7f3ea);
 }
 
 ::selection {
-  background: rgba(29, 78, 216, 0.20);
+  background: rgba(11, 18, 32, 0.16);
 }

@@ -15,18 +15,18 @@ export default function AddStopPage() {
       <Phone>
         <TopBar left={<Link href="/plan/map">Back</Link>} title="Add Stop" />
 
-        <Row title="Search Percy’s locations">
+        <Row title="Search Percy’s places">
           <div>[Search field]</div>
         </Row>
 
-        <Row title="Recommended on your route">
+        <Row title="A few good finds nearby">
           <ListItem>
-            Percy’s location • +X min impact • chargers/amenities
+            Percy’s place • a tiny detour • chargers/amenities
           </ListItem>
           <CTA>Add to route</CTA>
 
           <ListItem>
-            Percy’s location • +X min impact • chargers/amenities
+            Percy’s place • a tiny detour • chargers/amenities
           </ListItem>
           <CTA>Add to route</CTA>
         </Row>
@@ -35,7 +35,7 @@ export default function AddStopPage() {
           <Link href="/location">Stop details</Link>
         </Row>
 
-        <Note>Note: Shows time impact clearly; quick actions.</Note>
+        <Note>Note: Quick picks for when you want a little surprise.</Note>
       </Phone>
     </main>
   );

@@ -43,6 +43,24 @@ export default function LocationDetailPage() {
           <ListItem>Preview item 2</ListItem>
         </Row>
 
+        <Row title="Your Trip Story">
+          <div className="rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] p-5 shadow-[0_14px_34px_rgba(2,6,23,0.10)] backdrop-blur">
+            <div className="text-xs font-semibold text-slate-700">Trip Scrapbook (preview)</div>
+            <div className="mt-1 text-sm font-semibold text-slate-900">
+              A little visual story—made as you go.
+            </div>
+            <div className="mt-1 text-xs text-slate-600">
+              Percy quietly collects moments, stops, and tiny highlights. After the trip, it becomes a
+              shareable keepsake.
+            </div>
+            <div className="mt-3 grid grid-cols-3 gap-2">
+              <div className="h-16 rounded-2xl border border-white/55 bg-white/60" />
+              <div className="h-16 rounded-2xl border border-white/55 bg-white/55" />
+              <div className="h-16 rounded-2xl border border-white/55 bg-white/50" />
+            </div>
+          </div>
+        </Row>
+
         <CTA>Get directions</CTA>
         <CTA variant="secondary">Add stop to trip</CTA>
 

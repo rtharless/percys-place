@@ -43,7 +43,7 @@ export default function RouteMapPage() {
             Austin → Marfa
           </div>
           <div className="absolute right-6 top-8 rounded-full bg-white/75 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
-            Percy stops
+            Percy finds
           </div>
 
           <div className="absolute left-6 top-[52px] rounded-2xl border border-white/50 bg-white/70 px-3 py-2 text-[11px] font-semibold text-slate-700 shadow-sm backdrop-blur">
@@ -57,7 +57,7 @@ export default function RouteMapPage() {
 
           <div className="absolute bottom-4 left-4 rounded-2xl border border-white/50 bg-white/70 px-3 py-2 text-xs text-slate-700 shadow-sm backdrop-blur">
             <div className="font-semibold text-slate-900">2 stops added</div>
-            <div className="mt-0.5">Fast chargers • Local treats</div>
+            <div className="mt-0.5">Quiet views • Local flavors</div>
           </div>
 
           <div className="absolute bottom-4 right-4 flex gap-2">

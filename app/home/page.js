@@ -20,6 +20,97 @@ export default function HomeDashboardPage() {
           right={<Link href="/profile">Profile</Link>}
         />
 
+        <div className="my-3 rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] p-5 shadow-[0_16px_44px_rgba(2,6,23,0.10)] backdrop-blur">
+            <div className="text-xs font-semibold text-slate-600">Percy, your concierge</div>
+            <div className="mt-1 text-base font-semibold text-slate-900">
+              Tell Percy the vibe—Percy builds the adventure.
+            </div>
+            <div className="mt-1 text-xs text-slate-600">
+              A few signals. A curated route. Room for surprise.
+            </div>
+
+            <CTA>
+              <Link href="/plan">Build my adventure</Link>
+            </CTA>
+        </div>
+
+        <Row title="Featured journeys">
+          <div className="text-sm text-slate-700">
+            Curated escapes—built to feel like you found something.
+          </div>
+
+          <div className="mt-3 grid gap-3">
+            <Link
+              href="/plan/map"
+              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
+            >
+              <div
+                className="relative h-[96px] bg-cover bg-center"
+                style={{ backgroundImage: "url(/journeys/deserttowns.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-900">Desert light — quiet towns</div>
+                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
+                    Perfect long weekend
+                  </div>
+                </div>
+                <div className="mt-1 text-xs text-slate-600">
+                  Scenic roads, small galleries, and wide-open sky.
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              href="/explore"
+              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
+            >
+              <div
+                className="relative h-[96px] bg-cover bg-center"
+                style={{ backgroundImage: "url(/journeys/local%20flavors.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-900">Local flavors — near-you finds</div>
+                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
+                    Afternoon drift
+                  </div>
+                </div>
+                <div className="mt-1 text-xs text-slate-600">
+                  Coffee, pop-ups, and the kind of stops you text a friend about.
+                </div>
+              </div>
+            </Link>
+
+            <Link
+              href="/location"
+              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
+            >
+              <div
+                className="relative h-[96px] bg-cover bg-center"
+                style={{ backgroundImage: "url(/journeys/hidden%20views.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
+              </div>
+              <div className="p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="text-sm font-semibold text-slate-900">Hidden viewpoints — one good stretch</div>
+                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
+                    7-day escape
+                  </div>
+                </div>
+                <div className="mt-1 text-xs text-slate-600">
+                  Slow miles, quiet overlooks, and a route that breathes.
+                </div>
+              </div>
+            </Link>
+          </div>
+        </Row>
+
         <Row title="Next trip">
           <div className="text-base font-semibold">Austin → Marfa</div>
           <div className="mt-1 text-xs text-slate-500">Departure: Sat 9:30 AM</div>
@@ -40,13 +131,13 @@ export default function HomeDashboardPage() {
 
         <Row title="Primary Actions">
           <Pill>
-            <Link href="/plan">Plan a Trip</Link>
+            <Link href="/plan">Build an adventure</Link>
           </Pill>
           <Pill>
             <Link href="/explore">Explore Nearby</Link>
           </Pill>
           <Pill>
-            <Link href="/rewards">View Rewards</Link>
+            <Link href="/rewards">Your progress</Link>
           </Pill>
         </Row>
 

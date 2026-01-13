@@ -6,7 +6,6 @@ import Note from "@/components/wireframe/Note";
 import OnboardingSplash from "@/components/wireframe/OnboardingSplash";
 import Phone from "@/components/wireframe/Phone";
 import Pill from "@/components/wireframe/Pill";
-import Row from "@/components/wireframe/Row";
 
 export default function WelcomePage() {
   return (
@@ -22,34 +21,30 @@ export default function WelcomePage() {
             </div>
           </div>
 
-          <div className="mt-4 text-2xl font-semibold tracking-tight text-slate-900">
-            Plan smarter stops.
+          <div className="mt-5 text-[28px] font-semibold tracking-tight text-slate-900">
+            Find an adventure on the way.
           </div>
-          <div className="mt-2 text-sm leading-6 text-slate-600">
-            Charging, food, and local favorites—picked for your route.
+          <div className="mt-3 text-[13px] leading-6 text-slate-600">
+            Curated detours, quiet views, and places you'd never search for—picked to match your vibe.
           </div>
 
           <div className="mt-3">
-            <Pill>Fast chargers</Pill>
-            <Pill>Local eats</Pill>
-            <Pill>Curated stops</Pill>
+            <Pill>Hidden moments</Pill>
+            <Pill>Local flavor</Pill>
           </div>
 
           <div className="mt-4">
             <CTA>
-              <Link href="/onboarding/persona">Get started</Link>
+              <Link href="/onboarding/persona">Find my adventure</Link>
             </CTA>
             <div className="mt-1 text-center text-sm font-semibold text-slate-700">
               <Link href="/home">Sign in</Link>
             </div>
           </div>
 
-          <Row>
-            <div className="text-xs text-slate-600">
-              Percy's Place finds the best quick stops along your drive—with room
-              for spontaneity.
-            </div>
-          </Row>
+          <div className="mt-5 text-xs leading-5 text-slate-600">
+            Percy's Place helps you wander a little—and still arrive feeling like you found something.
+          </div>
 
           <Note>Note: Single primary action to keep onboarding calm.</Note>
         </OnboardingSplash>

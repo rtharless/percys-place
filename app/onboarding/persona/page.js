@@ -5,8 +5,6 @@ import { List, ListItem } from "@/components/wireframe/List";
 import Note from "@/components/wireframe/Note";
 import OnboardingSplash from "@/components/wireframe/OnboardingSplash";
 import Phone from "@/components/wireframe/Phone";
-import Row from "@/components/wireframe/Row";
-import TopBar from "@/components/wireframe/TopBar";
 
 export default function PersonaPage() {
   return (
@@ -15,21 +13,33 @@ export default function PersonaPage() {
 
       <Phone>
         <OnboardingSplash>
-          <TopBar
-            left={<Link href="/onboarding/welcome">Back</Link>}
-            title="Step 2 of 5"
-            right={null}
-          />
+          <div className="flex items-center justify-between">
+            <Link href="/onboarding/welcome" className="text-sm font-semibold text-slate-700">
+              Back
+            </Link>
+            <div className="text-xs font-semibold text-[#475569]">Adventure setup</div>
+          </div>
 
-          <Row title="Who are you traveling as?">
-            <div>[Select one]</div>
-          </Row>
+          <div className="relative mt-3 h-[3px] w-full overflow-hidden rounded-full bg-[#E6EBF2]">
+            <div className="h-full w-[40%] bg-[#1E3A8A]" />
+            <div
+              className="absolute top-0 h-full w-[2px] bg-[#C8102E]"
+              style={{ left: "25%" }}
+            />
+          </div>
+
+          <div className="mt-5 text-[20px] font-semibold tracking-tight text-slate-900">
+            How do you like to explore?
+          </div>
+          <div className="mt-1 text-sm text-[#475569]">Select one</div>
 
           <List>
-            <ListItem>EV Driver (default)</ListItem>
-            <ListItem>Family</ListItem>
-            <ListItem>Retiree</ListItem>
-            <ListItem>Adventurous Couple / Solo</ListItem>
+            <ListItem tone="onboarding" selected accent="blue">
+              Steady & scenic (default)
+            </ListItem>
+            <ListItem tone="onboarding">Comfort stops & easy wins</ListItem>
+            <ListItem tone="onboarding" accent="sand">Slow wander & small-town charm</ListItem>
+            <ListItem tone="onboarding" accent="red">Curious detours & surprise finds</ListItem>
           </List>
 
           <CTA>
