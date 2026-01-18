@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import CTA from "@/components/wireframe/CTA";
 import Note from "@/components/wireframe/Note";
 import Phone from "@/components/wireframe/Phone";
 import Pill from "@/components/wireframe/Pill";
@@ -18,6 +19,13 @@ export default function InStoreCountdownPage() {
           <div>Countdown: [mm:ss]</div>
           <div>Progress: [bar placeholder]</div>
           <div>Current % / Target % / Est. range added</div>
+        </Row>
+
+        <Row title="A small break">
+          <div className="text-sm text-slate-700">If you’re waiting, here are a few quiet games.</div>
+          <CTA variant="secondary">
+            <Link href="/in-store/games">Open games</Link>
+          </CTA>
         </Row>
 
         <Row title="Quick Actions">

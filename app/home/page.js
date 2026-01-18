@@ -37,6 +37,19 @@ export default function HomeDashboardPage() {
             <div className="-mt-1 text-xs text-slate-600">You’ve discovered 1,240 places so far.</div>
         </div>
 
+        <Row title="Today’s prompt">
+          <div className="text-sm text-slate-700">A nearby quiet stop worth noticing</div>
+          <div className="mt-1 text-xs text-slate-500">
+            If you have 20 minutes, Percy found a calm detour that fits your route mood.
+          </div>
+          <div className="mt-3 flex items-center justify-between gap-3">
+            <div className="text-xs font-semibold text-slate-700">Percy’s Place — Round Rock</div>
+            <Link href="/plan/map?focus=round-rock" className="text-xs font-semibold text-slate-700">
+              View on route
+            </Link>
+          </div>
+        </Row>
+
         <Row title="Today’s route">
           <div className="text-sm text-slate-700">Austin → Marfa</div>
           <div className="mt-3">
@@ -124,15 +137,6 @@ export default function HomeDashboardPage() {
               </div>
             </Link>
           </div>
-        </Row>
-
-        <Row title="Next trip">
-          <div className="text-base font-semibold">Austin → Marfa</div>
-          <div className="mt-1 text-xs text-slate-500">Departure: Sat 9:30 AM</div>
-          <CTA>
-            <Link href="/plan/map">View route</Link>
-          </CTA>
-          <CTA variant="secondary">Edit route</CTA>
         </Row>
 
         <Row title="Nearby Percy’s Locations">

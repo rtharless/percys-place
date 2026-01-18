@@ -14,7 +14,10 @@ export default function RoutePreferencesPage() {
       <Phone>
         <OnboardingSplash>
           <div className="flex items-center justify-between">
-            <Link href="/onboarding/interests" className="text-sm font-semibold text-slate-700">
+            <Link
+              href="/onboarding/interests"
+              className="inline-flex items-center rounded-2xl border border-white/60 bg-white/55 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_10px_22px_rgba(2,6,23,0.06)] backdrop-blur transition hover:bg-white/65 hover:shadow-[0_12px_26px_rgba(2,6,23,0.08)] active:scale-[0.99]"
+            >
               Back
             </Link>
             <div className="text-xs font-semibold text-[#475569]">Adventure setup</div>

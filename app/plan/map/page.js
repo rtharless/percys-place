@@ -4,7 +4,7 @@ import CTA from "@/components/wireframe/CTA";
 import { ListItem } from "@/components/wireframe/List";
 import Note from "@/components/wireframe/Note";
 import Phone from "@/components/wireframe/Phone";
-import RouteMapInteractive from "@/components/wireframe/RouteMapInteractive";
+import PlanRouteHero from "@/components/wireframe/PlanRouteHero";
 import Row from "@/components/wireframe/Row";
 import TopBar from "@/components/wireframe/TopBar";
 
@@ -18,7 +18,7 @@ export default function RouteMapPage({ searchParams }) {
       <Phone>
         <TopBar left={<Link href="/plan">Back</Link>} title="Route Map" />
 
-        <RouteMapInteractive focusedStopId={focusedStopId} />
+        <PlanRouteHero focusedStopId={focusedStopId} />
 
         <div className="relative my-2 rounded-3xl border border-white/50 bg-white/70 p-3 shadow-[0_18px_50px_rgba(15,23,42,0.14)] backdrop-blur">
           <div className="mx-auto mb-3 h-1.5 w-12 rounded-full bg-slate-900/10" />

@@ -55,10 +55,10 @@ export default function MapPreview({
 
   return (
     <div
-      className="relative overflow-hidden rounded-3xl border border-white/50 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.22),_transparent_56%),radial-gradient(circle_at_bottom,_rgba(200,16,46,0.14),_transparent_62%),linear-gradient(180deg,_rgba(255,255,255,0.72),_rgba(255,255,255,0.28))] shadow-[0_18px_50px_rgba(15,23,42,0.14)]"
+      className="relative overflow-hidden rounded-3xl border border-white/50 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.20),_transparent_56%),radial-gradient(circle_at_bottom,_rgba(200,16,46,0.12),_transparent_62%),linear-gradient(180deg,_rgba(255,255,255,0.72),_rgba(255,255,255,0.28))] shadow-[0_18px_50px_rgba(15,23,42,0.10)]"
       style={{ height }}
     >
-      <div className="absolute inset-0 opacity-[0.18] mix-blend-multiply [background-image:linear-gradient(to_right,rgba(15,23,42,0.12)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.12)_1px,transparent_1px)] [background-size:22px_22px]" />
+      <div className="absolute inset-0 opacity-[0.14] mix-blend-multiply [background-image:linear-gradient(to_right,rgba(15,23,42,0.10)_1px,transparent_1px),linear-gradient(to_bottom,rgba(15,23,42,0.10)_1px,transparent_1px)] [background-size:22px_22px]" />
 
       <svg viewBox="0 0 390 280" className="absolute inset-0 h-full w-full" aria-hidden="true">
         <path

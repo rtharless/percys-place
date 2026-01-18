@@ -1,4 +1,4 @@
-export default function Pill({ children, selected = false, tone = "default", accent = "blue" }) {
+export default function Pill({ children, selected = false, tone = "default", accent = "blue", onClick }) {
   const label = typeof children === "string" ? children.toLowerCase() : "";
 
   const tintClass =
@@ -25,21 +25,21 @@ export default function Pill({ children, selected = false, tone = "default", acc
       ? "border-[#E6EBF2] bg-white text-[#475569]"
       : tintClass;
 
-  return (
-    <span
-      className={
-        "mr-3 mt-3 inline-flex items-center rounded-xl border px-3 py-1 text-[11px] font-medium tracking-wide shadow-[0_6px_14px_rgba(2,6,23,0.06)] " +
-        (selected ? selectedClass : baseClass) +
-        (tone === "onboarding" ? " gap-2" : "")
-      }
-      style={
-        tone === "onboarding" && selected
-          ? { borderColor: accentColor }
-          : tone === "onboarding"
-            ? { borderColor: "#E6EBF2" }
-            : undefined
-      }
-    >
+  const className =
+    "mr-3 mt-3 inline-flex items-center rounded-xl border px-3 py-1 text-[11px] font-medium tracking-wide shadow-[0_6px_14px_rgba(2,6,23,0.06)] " +
+    (selected ? selectedClass : baseClass) +
+    (tone === "onboarding" ? " gap-2" : "") +
+    (typeof onClick === "function" ? " cursor-pointer" : "");
+
+  const style =
+    tone === "onboarding" && selected
+      ? { borderColor: accentColor }
+      : tone === "onboarding"
+        ? { borderColor: "#E6EBF2" }
+        : undefined;
+
+  const content = (
+    <>
       {tone === "onboarding" ? (
         <span
           aria-hidden="true"
@@ -48,6 +48,20 @@ export default function Pill({ children, selected = false, tone = "default", acc
         />
       ) : null}
       {children}
+    </>
+  );
+
+  if (typeof onClick === "function") {
+    return (
+      <button type="button" onClick={onClick} className={className} style={style}>
+        {content}
+      </button>
+    );
+  }
+
+  return (
+    <span className={className} style={style}>
+      {content}
     </span>
   );
 }

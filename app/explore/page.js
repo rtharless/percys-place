@@ -19,7 +19,7 @@ export default function ExploreNearbyPage() {
 
         <Row title="Map">
           <div className="text-sm text-slate-700">Along your route to Marfa</div>
-          <div className="mt-2 text-xs text-slate-500">A calm, route-first view.</div>
+          <div className="mt-2 text-xs text-slate-500">A calm, route-first view. No endless scrolling.</div>
           <div className="mt-3">
             <MapPreview height={220} />
           </div>
@@ -65,6 +65,20 @@ export default function ExploreNearbyPage() {
             <div className="font-semibold">Tiny Museum</div>
             <div className="mt-1 text-xs text-slate-500">
               Quick culture hit • +25 min • 0.9 mi
+            </div>
+            <div className="mt-2 text-xs text-slate-600">Save / Add to route</div>
+          </ListItem>
+          <ListItem>
+            <div className="font-semibold">Quiet Patio</div>
+            <div className="mt-1 text-xs text-slate-500">
+              A calm pause • +9 min • 1.4 mi
+            </div>
+            <div className="mt-2 text-xs text-slate-600">Save / Add to route</div>
+          </ListItem>
+          <ListItem>
+            <div className="font-semibold">Hidden Viewpoint</div>
+            <div className="mt-1 text-xs text-slate-500">
+              Wide sky, short walk • +15 min • 3.0 mi
             </div>
             <div className="mt-2 text-xs text-slate-600">Save / Add to route</div>
           </ListItem>

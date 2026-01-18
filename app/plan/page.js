@@ -20,6 +20,9 @@ export default function PlanTripPage() {
           <div className="rounded-xl border border-white/50 bg-white/60 px-3 py-3 text-sm text-slate-700 shadow-sm backdrop-blur transition hover:bg-white/70">
             Austin, TX (current)
           </div>
+          <div className="mt-2 text-xs text-slate-500">
+            Percy will handle the details—stops, timing, and small surprises—so you can keep this simple.
+          </div>
         </Row>
         <Row title="Destination">
           <div className="rounded-xl border border-white/50 bg-white/60 px-3 py-3 text-sm text-slate-700 shadow-sm backdrop-blur transition hover:bg-white/70">
@@ -30,14 +33,10 @@ export default function PlanTripPage() {
         <Row title="Route mood">
           <Pill>Scenic route (recommended)</Pill>
           <Pill>Direct route</Pill>
-        </Row>
-
-        <Row title="Stops">
-          <div className="text-sm text-slate-700">
-            Let Percy add a few finds (on)
-          </div>
-          <div className="mt-1 text-xs text-slate-500">
-            We'll weave in places that match your vibe—with room for surprise.
+          <div className="mt-3">
+            <Link href="/profile/preferences" className="text-xs font-semibold text-slate-700">
+              Tune this later
+            </Link>
           </div>
         </Row>
 

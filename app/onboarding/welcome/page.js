@@ -37,9 +37,9 @@ export default function WelcomePage() {
             <CTA>
               <Link href="/onboarding/persona">Find my adventure</Link>
             </CTA>
-            <div className="mt-1 text-center text-sm font-semibold text-slate-700">
+            <CTA variant="secondary">
               <Link href="/home">Sign in</Link>
-            </div>
+            </CTA>
           </div>
 
           <div className="mt-5 text-xs leading-5 text-slate-600">
