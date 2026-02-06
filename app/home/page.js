@@ -3,13 +3,17 @@ import Link from "next/link";
 import { PercysLogoMark } from "@/components/brand/PercysLogo";
 import BottomNav from "@/components/wireframe/BottomNav";
 import CTA from "@/components/wireframe/CTA";
-import MapPreview from "@/components/wireframe/MapPreview";
 import Phone from "@/components/wireframe/Phone";
 import Pill from "@/components/wireframe/Pill";
 import Row from "@/components/wireframe/Row";
 import TopBar from "@/components/wireframe/TopBar";
 
-export default function HomeDashboardPage() {
+import { getFeaturedTrips, getSeasonalTrips } from "@/demo/data";
+
+export default async function HomeDashboardPage() {
+  const featuredTrips = await getFeaturedTrips();
+  const seasonalTrips = await getSeasonalTrips();
+
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-start gap-4 p-8">
       <h1 className="text-xl font-semibold">2.1 Home Dashboard</h1>
@@ -22,120 +26,84 @@ export default function HomeDashboardPage() {
         />
 
         <div className="my-3 rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] p-5 shadow-[0_16px_44px_rgba(2,6,23,0.10)] backdrop-blur">
-            <div className="text-xs font-semibold text-slate-600">Percy, your concierge</div>
-            <div className="mt-1 text-base font-semibold text-slate-900">
-              Tell Percy the vibe—Percy builds the adventure.
-            </div>
-            <div className="mt-1 text-xs text-slate-600">
-              A few signals. A curated route. Room for surprise.
-            </div>
+          <div className="text-xs font-semibold text-slate-600">Percy, your AI concierge</div>
+          <div className="mt-1 text-base font-semibold text-slate-900">
+            Tell Percy the vibe—Percy builds the trip.
+          </div>
+          <div className="mt-1 text-xs text-slate-600">
+            A few signals. A curated itinerary. Room for surprise.
+          </div>
 
-            <CTA>
-              <Link href="/plan">Build my adventure</Link>
-            </CTA>
+          <CTA>
+            <Link href="/concierge">Build my trip</Link>
+          </CTA>
 
-            <div className="-mt-1 text-xs text-slate-600">You’ve discovered 1,240 places so far.</div>
+          <div className="-mt-1 text-xs text-slate-600">Curated discovery. No infinite scroll.</div>
         </div>
 
-        <Row title="Today’s prompt">
-          <div className="text-sm text-slate-700">A nearby quiet stop worth noticing</div>
-          <div className="mt-1 text-xs text-slate-500">
-            If you have 20 minutes, Percy found a calm detour that fits your route mood.
-          </div>
-          <div className="mt-3 flex items-center justify-between gap-3">
-            <div className="text-xs font-semibold text-slate-700">Percy’s Place — Round Rock</div>
-            <Link href="/plan/map?focus=round-rock" className="text-xs font-semibold text-slate-700">
-              View on route
-            </Link>
-          </div>
-        </Row>
-
-        <Row title="Today’s route">
-          <div className="text-sm text-slate-700">Austin → Marfa</div>
-          <div className="mt-3">
-            <MapPreview height={140} />
-          </div>
-          <div className="mt-3">
-            <Link href="/plan/map" className="text-xs font-semibold text-slate-700">
-              Open route
-            </Link>
-          </div>
-        </Row>
-
-        <Row title="Featured journeys">
-          <div className="text-sm text-slate-700">
-            Curated escapes—built to feel like you found something.
-          </div>
+        <Row title="Featured Trips">
+          <div className="text-sm text-slate-700">Handpicked escapes with a clear theme.</div>
 
           <div className="mt-3 grid gap-3">
-            <Link
-              href="/plan/map"
-              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
-            >
-              <div
-                className="relative h-[96px] bg-cover bg-center"
-                style={{ backgroundImage: "url(/journeys/deserttowns.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
+            {featuredTrips.slice(0, 5).map((trip) => (
+              <Link
+                key={trip.id}
+                href={`/trips/${trip.id}`}
+                className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
-              </div>
-              <div className="p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="text-sm font-semibold text-slate-900">Desert light — quiet towns</div>
-                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
-                    Perfect long weekend
+                <div
+                  className="relative h-[104px] bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${trip.image})`,
+                    filter: "saturate(1.15) contrast(1.08)",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="text-sm font-semibold text-slate-900">{trip.title}</div>
+                    <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
+                      {trip.duration}
+                    </div>
                   </div>
+                  <div className="mt-1 text-xs text-slate-600">{trip.subtitle}</div>
                 </div>
-                <div className="mt-1 text-xs text-slate-600">
-                  Scenic roads, small galleries, and wide-open sky.
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
+          </div>
+        </Row>
 
-            <Link
-              href="/explore"
-              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
-            >
-              <div
-                className="relative h-[96px] bg-cover bg-center"
-                style={{ backgroundImage: "url(/journeys/local%20flavors.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
-              >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
-              </div>
-              <div className="p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="text-sm font-semibold text-slate-900">Local flavors — near-you finds</div>
-                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
-                    Afternoon drift
-                  </div>
-                </div>
-                <div className="mt-1 text-xs text-slate-600">
-                  Coffee, pop-ups, and the kind of stops you text a friend about.
-                </div>
-              </div>
-            </Link>
+        <Row title="Seasonal Trips">
+          <div className="text-sm text-slate-700">Curated for right now—only a few.</div>
 
-            <Link
-              href="/location"
-              className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
-            >
-              <div
-                className="relative h-[96px] bg-cover bg-center"
-                style={{ backgroundImage: "url(/journeys/hidden%20views.jpeg)", filter: "saturate(1.15) contrast(1.08)" }}
+          <div className="mt-3 grid gap-3">
+            {seasonalTrips.slice(0, 6).map((trip) => (
+              <Link
+                key={trip.id}
+                href={`/trips/seasonal/${trip.id}`}
+                className="block overflow-hidden rounded-3xl border border-white/45 bg-gradient-to-b from-[#FFFEFA] to-[#F6F0E6] shadow-[0_14px_34px_rgba(2,6,23,0.10)] transition hover:shadow-[0_18px_44px_rgba(2,6,23,0.12)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/5 to-transparent" />
-              </div>
-              <div className="p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div className="text-sm font-semibold text-slate-900">Hidden viewpoints — one good stretch</div>
-                  <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
-                    7-day escape
+                <div
+                  className="relative h-[96px] bg-cover bg-center"
+                  style={{
+                    backgroundImage: `url(${trip.image})`,
+                    filter: "saturate(1.15) contrast(1.08)",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/10 to-transparent" />
+                </div>
+                <div className="p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="text-sm font-semibold text-slate-900">{trip.title}</div>
+                    <div className="shrink-0 rounded-full border border-white/55 bg-white/60 px-3 py-1 text-[11px] font-semibold text-slate-700 backdrop-blur">
+                      {trip.duration}
+                    </div>
                   </div>
+                  <div className="mt-1 text-xs text-slate-600">{trip.subtitle}</div>
                 </div>
-                <div className="mt-1 text-xs text-slate-600">
-                  Slow miles, quiet overlooks, and a route that breathes.
-                </div>
-              </div>
-            </Link>
+              </Link>
+            ))}
           </div>
         </Row>
 
@@ -150,7 +118,7 @@ export default function HomeDashboardPage() {
 
         <Row title="Primary Actions">
           <Pill>
-            <Link href="/plan">Build an adventure</Link>
+            <Link href="/concierge">Build my trip</Link>
           </Pill>
           <Pill>
             <Link href="/explore">Explore Nearby</Link>
@@ -159,10 +127,6 @@ export default function HomeDashboardPage() {
             <Link href="/rewards">Your progress</Link>
           </Pill>
         </Row>
-
-        <CTA variant="secondary">
-          <Link href="/onboarding">Start onboarding</Link>
-        </CTA>
 
         <BottomNav activeHref="/home" />
       </Phone>

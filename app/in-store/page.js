@@ -47,6 +47,9 @@ export default function InStoreCountdownPage() {
         </Row>
 
         <Note>Note: Designed for quick glance while waiting.</Note>
+        <div className="mt-2 px-2 text-center text-[11px] text-slate-500">
+          Disclaimer: Demo only. No real charging telemetry, live tracking, or payments.
+        </div>
       </Phone>
     </main>
   );

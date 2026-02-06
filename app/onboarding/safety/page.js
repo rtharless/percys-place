@@ -9,7 +9,7 @@ import Phone from "@/components/wireframe/Phone";
 export default function SafetyPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-start gap-4 p-8">
-      <h1 className="text-xl font-semibold">1.5 Safety & Comfort</h1>
+      <h1 className="text-xl font-semibold">1.6 Safety & Comfort</h1>
 
       <Phone>
         <OnboardingSplash>

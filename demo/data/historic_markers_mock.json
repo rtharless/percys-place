@@ -1,0 +1,90 @@
+[
+  {
+    "id": "marker-001",
+    "name": "Old Cape Charles Lighthouse",
+    "location": { "lat": 37.2678, "lng": -76.0176 },
+    "type": "lighthouse",
+    "yearEstablished": 1828,
+    "description": "One of the oldest surviving lighthouses on the Chesapeake Bay. Guided mariners for over a century.",
+    "significance": "Maritime heritage",
+    "image": "/images/markers/cape-charles-lighthouse.jpg",
+    "tags": ["maritime", "lighthouse", "19th-century"]
+  },
+  {
+    "id": "marker-002",
+    "name": "Bayside Railroad Depot",
+    "location": { "lat": 37.2655, "lng": -76.0155 },
+    "type": "railroad",
+    "yearEstablished": 1884,
+    "description": "Former terminus of the New York, Philadelphia and Norfolk Railroad. Brought tourism to the Eastern Shore.",
+    "significance": "Transportation history",
+    "image": "/images/markers/railroad-depot.jpg",
+    "tags": ["railroad", "transportation", "gilded-age"]
+  },
+  {
+    "id": "marker-003",
+    "name": "Kiptopeke State Park Battery",
+    "location": { "lat": 37.1656, "lng": -75.9667 },
+    "type": "military",
+    "yearEstablished": 1942,
+    "description": "WWII coastal defense battery. Concrete ships were sunk here to create a breakwater.",
+    "significance": "WWII history",
+    "image": "/images/markers/kiptopeke-battery.jpg",
+    "tags": ["military", "wwii", "coastal-defense"]
+  },
+  {
+    "id": "marker-004",
+    "name": "Onancock Wharf",
+    "location": { "lat": 37.7113, "lng": -75.7463 },
+    "type": "maritime",
+    "yearEstablished": 1680,
+    "description": "One of the oldest continuously operating ports on the Eastern Shore. Historic steamboat landing.",
+    "significance": "Colonial commerce",
+    "image": "/images/markers/onancock-wharf.jpg",
+    "tags": ["colonial", "maritime", "commerce"]
+  },
+  {
+    "id": "marker-005",
+    "name": "Chincoteague Pony Penning Site",
+    "location": { "lat": 37.9334, "lng": -75.3788 },
+    "type": "cultural",
+    "yearEstablished": 1925,
+    "description": "Annual pony swim tradition site. Wild horses of Assateague are rounded up and swum across the channel.",
+    "significance": "Living tradition",
+    "image": "/images/markers/chincoteague-ponies.jpg",
+    "tags": ["cultural", "tradition", "wildlife"]
+  },
+  {
+    "id": "marker-006",
+    "name": "Tangier Island Historic District",
+    "location": { "lat": 37.8265, "lng": -75.9913 },
+    "type": "settlement",
+    "yearEstablished": 1686,
+    "description": "Historic fishing village preserving a unique English dialect and way of life from colonial times.",
+    "significance": "Cultural preservation",
+    "image": "/images/markers/tangier-island.jpg",
+    "tags": ["settlement", "fishing", "dialect"]
+  },
+  {
+    "id": "marker-007",
+    "name": "Belle Grove Plantation",
+    "location": { "lat": 39.0214, "lng": -78.3028 },
+    "type": "plantation",
+    "yearEstablished": 1797,
+    "description": "Birthplace of President James Madison. Beautifully preserved Federal-era plantation manor.",
+    "significance": "Presidential history",
+    "image": "/images/markers/belle-grove.jpg",
+    "tags": ["presidential", "plantation", "federal-era"]
+  },
+  {
+    "id": "marker-008",
+    "name": "Snickers Gap",
+    "location": { "lat": 39.1139, "lng": -77.8239 },
+    "type": "transportation",
+    "yearEstablished": 1750,
+    "description": "Historic mountain gap used by settlers moving west. Part of the original Route 7 corridor.",
+    "significance": "Westward expansion",
+    "image": "/images/markers/snickers-gap.jpg",
+    "tags": ["pioneer", "transportation", "mountain-pass"]
+  }
+]

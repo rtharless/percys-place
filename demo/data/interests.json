@@ -1,0 +1,86 @@
+[
+  {
+    "id": "scenic-views",
+    "label": "Scenic Views",
+    "icon": "mountain",
+    "description": "Breathtaking overlooks and vistas",
+    "color": "emerald"
+  },
+  {
+    "id": "historic-sites",
+    "label": "Historic Sites",
+    "icon": "landmark",
+    "description": "Landmarks and heritage locations",
+    "color": "rose"
+  },
+  {
+    "id": "local-flavor",
+    "label": "Local Flavor",
+    "icon": "utensils",
+    "description": "Local cuisine and farm-to-table",
+    "color": "amber"
+  },
+  {
+    "id": "photo-stops",
+    "label": "Photo Stops",
+    "icon": "camera",
+    "description": "Instagram-worthy locations",
+    "color": "sky"
+  },
+  {
+    "id": "nature-trails",
+    "label": "Nature Trails",
+    "icon": "tree",
+    "description": "Hiking and walking paths",
+    "color": "green"
+  },
+  {
+    "id": "waterfront",
+    "label": "Waterfront",
+    "icon": "waves",
+    "description": "Lakes, rivers, and coastal spots",
+    "color": "blue"
+  },
+  {
+    "id": "art-culture",
+    "label": "Art & Culture",
+    "icon": "palette",
+    "description": "Galleries, museums, and studios",
+    "color": "purple"
+  },
+  {
+    "id": "wine-breweries",
+    "label": "Wine & Breweries",
+    "icon": "wine",
+    "description": "Tasting rooms and vineyards",
+    "color": "violet"
+  },
+  {
+    "id": "hidden-gems",
+    "label": "Hidden Gems",
+    "icon": "gem",
+    "description": "Off-the-beaten-path discoveries",
+    "color": "teal"
+  },
+  {
+    "id": "serenity",
+    "label": "Serenity",
+    "icon": "sparkles",
+    "description": "Quiet places, low stimulation, calm moments",
+    "color": "slate"
+  },
+  {
+    "id": "wildlife",
+    "label": "Wildlife",
+    "icon": "paw-print",
+    "description": "Wildlife sightings and nature encounters",
+    "color": "lime"
+  },
+  {
+    "id": "events",
+    "label": "Events",
+    "icon": "ticket",
+    "description": "Seasonal markets, festivals, and small local events",
+    "color": "orange"
+  }
+]

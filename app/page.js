@@ -14,8 +14,9 @@ export default function HomePage() {
           <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/welcome">1.1 Welcome</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/persona">1.2 Persona Selection</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/interests">1.3 Travel Style & Interests</a>
-          <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/route-preferences">1.4 Route Preferences</a>
-          <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/safety">1.5 Safety & Comfort</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/permissions">1.4 Location permissions</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/route-preferences">1.5 Route Preferences</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/onboarding/safety">1.6 Safety & Comfort</a>
         </div>
       </section>
 
@@ -23,10 +24,14 @@ export default function HomePage() {
         <h2 className="text-lg font-medium">Core</h2>
         <div className="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2">
           <a className="rounded-lg border bg-white px-3 py-2" href="/home">2.1 Home Dashboard</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/concierge">3.0 AI Concierge</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/trips">5.0 Trips</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/plan">3.1 Plan: Start & Destination</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/plan/map">3.2 Plan: Route Map</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/plan/add-stop">3.3 Plan: Add Stop</a>
           <a className="rounded-lg border bg-white px-3 py-2" href="/location">4.1 Stop Detail</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/in-car">6.8 In-Car Mode (Placeholder)</a>
+          <a className="rounded-lg border bg-white px-3 py-2" href="/arriving">6.9 Arriving moment</a>
         </div>
       </section>
 

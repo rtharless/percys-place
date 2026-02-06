@@ -18,7 +18,7 @@ export default function PlanTripPage() {
 
         <Row title="Starting location">
           <div className="rounded-xl border border-white/50 bg-white/60 px-3 py-3 text-sm text-slate-700 shadow-sm backdrop-blur transition hover:bg-white/70">
-            Austin, TX (current)
+            Cape Charles, VA (demo)
           </div>
           <div className="mt-2 text-xs text-slate-500">
             Percy will handle the details—stops, timing, and small surprises—so you can keep this simple.
@@ -26,7 +26,7 @@ export default function PlanTripPage() {
         </Row>
         <Row title="Destination">
           <div className="rounded-xl border border-white/50 bg-white/60 px-3 py-3 text-sm text-slate-700 shadow-sm backdrop-blur transition hover:bg-white/70">
-            Marfa, TX
+            Washington, DC
           </div>
         </Row>
 
@@ -44,7 +44,7 @@ export default function PlanTripPage() {
           <Link href="/plan/map">Show my adventure</Link>
         </CTA>
 
-        <BottomNav activeHref="/plan" />
+        <BottomNav activeHref="/trips" />
         <Note>Note: Short inputs; no long forms.</Note>
       </Phone>
     </main>

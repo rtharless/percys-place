@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import BottomNav from "@/components/wireframe/BottomNav";
 import CTA from "@/components/wireframe/CTA";
 import { ListItem } from "@/components/wireframe/List";
 import Note from "@/components/wireframe/Note";
@@ -23,18 +24,23 @@ export default function AddStopPage() {
           <ListItem>
             Percy’s place • a tiny detour • chargers/amenities
           </ListItem>
-          <CTA>Add to route</CTA>
+          <CTA variant="secondary">
+            <Link href="/plan/map">Add to route</Link>
+          </CTA>
 
           <ListItem>
             Percy’s place • a tiny detour • chargers/amenities
           </ListItem>
-          <CTA>Add to route</CTA>
+          <CTA variant="secondary">
+            <Link href="/plan/map">Add to route</Link>
+          </CTA>
         </Row>
 
         <Row>
           <Link href="/location">Stop details</Link>
         </Row>
 
+        <BottomNav activeHref="/trips" />
         <Note>Note: Quick picks for when you want a little surprise.</Note>
       </Phone>
     </main>

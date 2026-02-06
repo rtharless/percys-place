@@ -1,0 +1,38 @@
+[
+  {
+    "id": "seasonal-spring",
+    "title": "Spring Wildflower Trail",
+    "subtitle": "Peak bloom season in the Appalachians",
+    "season": "spring",
+    "duration": "2 days",
+    "distance": "140 miles",
+    "stops": 4,
+    "image": "/images/placeholders/trip-scenic.svg",
+    "tags": ["wildflowers", "spring", "nature"],
+    "bestTime": "March - May"
+  },
+  {
+    "id": "seasonal-summer",
+    "title": "Summer Lake Country",
+    "subtitle": "Cool mountain lakes and swimming holes",
+    "season": "summer",
+    "duration": "3 days",
+    "distance": "200 miles",
+    "stops": 5,
+    "image": "/images/placeholders/trip-coastal.svg",
+    "tags": ["lakes", "swimming", "summer"],
+    "bestTime": "June - August"
+  },
+  {
+    "id": "seasonal-fall",
+    "title": "Autumn Foliage Loop",
+    "subtitle": "Peak colors on scenic byways",
+    "season": "fall",
+    "duration": "3 days",
+    "distance": "180 miles",
+    "stops": 6,
+    "image": "/images/placeholders/trip-historic.svg",
+    "tags": ["foliage", "fall", "photography"],
+    "bestTime": "October - November"
+  }
+]

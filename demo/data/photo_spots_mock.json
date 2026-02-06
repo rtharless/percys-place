@@ -1,0 +1,98 @@
+[
+  {
+    "id": "photo-001",
+    "name": "Chesapeake Bay Bridge Viewpoint",
+    "location": { "lat": 37.0326, "lng": -76.0839 },
+    "type": "sunrise",
+    "bestTime": "6:00 AM - 8:00 AM",
+    "description": "Dramatic bridge silhouette against dawn colors. Perfect for wide-angle shots.",
+    "tips": "Arrive 30 minutes before sunrise. Bring a wide lens.",
+    "image": "/images/photos/bridge-sunrise.jpg",
+    "difficulty": "easy",
+    "parking": "Pull-off available"
+  },
+  {
+    "id": "photo-002",
+    "name": "Chincoteague Wildlife Refuge",
+    "location": { "lat": 37.9186, "lng": -75.3606 },
+    "type": "wildlife",
+    "bestTime": "Golden hour, 7:00 AM - 9:00 AM",
+    "description": "Wild ponies grazing in marshland. Iconic Eastern Shore imagery.",
+    "tips": "Telephoto lens recommended. Stay on designated trails.",
+    "image": "/images/photos/chincoteague-ponies.jpg",
+    "difficulty": "moderate",
+    "parking": "Visitor center lot"
+  },
+  {
+    "id": "photo-003",
+    "name": "Shenandoah National Park Overlook",
+    "location": { "lat": 38.4751, "lng": -78.4454 },
+    "type": "landscape",
+    "bestTime": "Sunset, 6:00 PM - 8:00 PM",
+    "description": "Panoramic valley views from Skyline Drive. Layered mountains at golden hour.",
+    "tips": "Best in fall for color. Bring a tripod for stability.",
+    "image": "/images/photos/shenandoah-overlook.jpg",
+    "difficulty": "easy",
+    "parking": "Overlook parking"
+  },
+  {
+    "id": "photo-004",
+    "name": "Assateague Island Beach",
+    "location": { "lat": 38.0907, "lng": -75.2097 },
+    "type": "coastal",
+    "bestTime": "Blue hour, 30 min after sunset",
+    "description": "Wild horses on pristine dunes. Atlantic surf in background.",
+    "tips": "Approach horses slowly. Respect their space.",
+    "image": "/images/photos/assateague-beach.jpg",
+    "difficulty": "easy",
+    "parking": "Beach access lot"
+  },
+  {
+    "id": "photo-005",
+    "name": "Middleburg Countryside",
+    "location": { "lat": 38.9687, "lng": -77.7358 },
+    "type": "rural",
+    "bestTime": "Morning fog, 7:00 AM - 9:00 AM",
+    "description": "Rolling horse country with fences and mist. Classic Virginia scene.",
+    "tips": "Foggy mornings in autumn are magical. Explore side roads.",
+    "image": "/images/photos/middleburg-countryside.jpg",
+    "difficulty": "easy",
+    "parking": "Roadside pull-offs"
+  },
+  {
+    "id": "photo-006",
+    "name": "Great Falls Potomac River",
+    "location": { "lat": 38.9977, "lng": -77.2536 },
+    "type": "waterfall",
+    "bestTime": "Overcast days, 10:00 AM - 2:00 PM",
+    "description": "Dramatic waterfalls and rapids. Powerful water movement.",
+    "tips": "Use fast shutter to freeze water. ND filter helpful.",
+    "image": "/images/photos/great-falls.jpg",
+    "difficulty": "moderate",
+    "parking": "National Park lot"
+  },
+  {
+    "id": "photo-007",
+    "name": "Luray Caverns",
+    "location": { "lat": 38.6643, "lng": -78.4834 },
+    "type": "interior",
+    "bestTime": "Any time (indoor)",
+    "description": "Otherworldly stalactite formations. Dramatic lighting.",
+    "tips": "High ISO needed. No tripods allowed. Steady hands required.",
+    "image": "/images/photos/luray-caverns.jpg",
+    "difficulty": "easy",
+    "parking": "Visitor parking"
+  },
+  {
+    "id": "photo-008",
+    "name": "Vineyard at Sunset",
+    "location": { "lat": 38.6234, "lng": -78.1234 },
+    "type": "agricultural",
+    "bestTime": "Golden hour, 6:30 PM - 8:00 PM",
+    "description": "Vine rows leading to sunset. Wine country romance.",
+    "tips": "Ask permission before entering private vineyards.",
+    "image": "/images/photos/vineyard-sunset.jpg",
+    "difficulty": "easy",
+    "parking": "Winery parking"
+  }
+]

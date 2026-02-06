@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 import CTA from "@/components/wireframe/CTA";
 import Note from "@/components/wireframe/Note";
@@ -6,7 +10,42 @@ import OnboardingSplash from "@/components/wireframe/OnboardingSplash";
 import Phone from "@/components/wireframe/Phone";
 import Pill from "@/components/wireframe/Pill";
 
+import {
+  getInterests,
+  getInterestsFromLocal,
+  saveInterestsToLocal,
+} from "@/demo/data";
+
 export default function InterestsPage() {
+  const router = useRouter();
+  const [allInterests, setAllInterests] = useState([]);
+  const [selected, setSelected] = useState([]);
+
+  useEffect(() => {
+    let mounted = true;
+    (async () => {
+      const interests = await getInterests();
+      if (!mounted) return;
+      setAllInterests(interests);
+      setSelected(getInterestsFromLocal());
+    })();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  function toggle(id) {
+    setSelected((prev) => {
+      if (prev.includes(id)) return prev.filter((x) => x !== id);
+      return [...prev, id];
+    });
+  }
+
+  function onContinue() {
+    saveInterestsToLocal(selected);
+    router.push("/onboarding/permissions");
+  }
+
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-start gap-4 p-8">
       <h1 className="text-xl font-semibold">1.3 Travel Style & Interests</h1>
@@ -37,18 +76,26 @@ export default function InterestsPage() {
           <div className="mt-1 text-sm text-[#475569]">Select any</div>
 
           <div className="mt-2">
-            <Pill tone="onboarding">Natural beauty</Pill>
-            <Pill tone="onboarding" selected accent="blue">Hidden attractions</Pill>
-            <Pill tone="onboarding" selected accent="blue">Local flavors</Pill>
-            <Pill tone="onboarding">What locals do</Pill>
-            <Pill tone="onboarding">Historical significance</Pill>
-            <Pill tone="onboarding">Ultimate serenity</Pill>
-            <Pill tone="onboarding">Wildlife</Pill>
-            <Pill tone="onboarding">Temporary events</Pill>
+            {allInterests.map((interest) => {
+              const isSelected = selected.includes(interest.id);
+              return (
+                <Pill
+                  key={interest.id}
+                  tone="onboarding"
+                  selected={isSelected}
+                  accent={isSelected ? "blue" : undefined}
+                  onClick={() => toggle(interest.id)}
+                >
+                  {interest.label}
+                </Pill>
+              );
+            })}
           </div>
 
           <CTA>
-            <Link href="/onboarding/route-preferences">Continue</Link>
+            <button type="button" className="w-full" onClick={onContinue}>
+              Continue
+            </button>
           </CTA>
 
           <Note>Note: Chip UI reduces form friction.</Note>

@@ -9,13 +9,13 @@ import Pill from "@/components/wireframe/Pill";
 export default function RoutePreferencesPage() {
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-start gap-4 p-8">
-      <h1 className="text-xl font-semibold">1.4 Route Preferences</h1>
+      <h1 className="text-xl font-semibold">1.5 Route Preferences</h1>
 
       <Phone>
         <OnboardingSplash>
           <div className="flex items-center justify-between">
             <Link
-              href="/onboarding/interests"
+              href="/onboarding/permissions"
               className="inline-flex items-center rounded-2xl border border-white/60 bg-white/55 px-4 py-2 text-sm font-semibold text-slate-700 shadow-[0_10px_22px_rgba(2,6,23,0.06)] backdrop-blur transition hover:bg-white/65 hover:shadow-[0_12px_26px_rgba(2,6,23,0.08)] active:scale-[0.99]"
             >
               Back

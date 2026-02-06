@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import BottomNav from "@/components/wireframe/BottomNav";
 import CTA from "@/components/wireframe/CTA";
 import { ListItem } from "@/components/wireframe/List";
 import Note from "@/components/wireframe/Note";
@@ -25,7 +26,9 @@ export default function LocationDetailPage() {
         <Row title="Charging Availability">
           <div>Availability: [X available / limited]</div>
           <div>Connector types: [placeholder]</div>
-          <CTA>Reserve charger</CTA>
+          <CTA>
+            <Link href="/in-store">Reserve charger (demo)</Link>
+          </CTA>
         </Row>
 
         <Row title="Estimated Stop Duration">
@@ -61,8 +64,14 @@ export default function LocationDetailPage() {
           </div>
         </Row>
 
-        <CTA>Get directions</CTA>
-        <CTA variant="secondary">Add stop to trip</CTA>
+        <CTA>
+          <Link href="/plan/map">Get directions (demo)</Link>
+        </CTA>
+        <CTA variant="secondary">
+          <Link href="/plan/map">Add stop to trip</Link>
+        </CTA>
+
+        <BottomNav activeHref="/explore" />
 
         <Note>
           Note: High-confidence decision screen; key info above fold.

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "trip-001",
+    "title": "Blue Ridge Parkway Weekend",
+    "subtitle": "Scenic mountain views and historic overlooks",
+    "duration": "3 days",
+    "distance": "180 miles",
+    "stops": 5,
+    "image": "/images/placeholders/trip-scenic.svg",
+    "tags": ["scenic", "mountains", "historic"],
+    "difficulty": "easy",
+    "featured": true
+  },
+  {
+    "id": "trip-002",
+    "title": "Shenandoah Valley Escape",
+    "subtitle": "Wine country and rolling hills",
+    "duration": "2 days",
+    "distance": "120 miles",
+    "stops": 4,
+    "image": "/images/placeholders/trip-historic.svg",
+    "tags": ["wine", "countryside", "relaxing"],
+    "difficulty": "easy",
+    "featured": true
+  },
+  {
+    "id": "trip-003",
+    "title": "Chesapeake Bay Coastal Drive",
+    "subtitle": "Waterfront towns and fresh seafood",
+    "duration": "4 days",
+    "distance": "250 miles",
+    "stops": 6,
+    "image": "/images/placeholders/trip-coastal.svg",
+    "tags": ["coastal", "seafood", "waterfront"],
+    "difficulty": "moderate",
+    "featured": true
+  }
+]

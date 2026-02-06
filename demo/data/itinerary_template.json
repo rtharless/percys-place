@@ -1,0 +1,141 @@
+{
+  "templateVersion": "1.0",
+  "days": [
+    {
+      "dayNumber": 1,
+      "theme": "Departure and discovery",
+      "activities": [
+        {
+          "type": "departure",
+          "time": "09:00",
+          "title": "Start your journey",
+          "description": "Pick up your route from {startLocation}"
+        },
+        {
+          "type": "drive",
+          "time": "09:30 - 11:00",
+          "title": "Scenic drive",
+          "description": "Enjoy the views along {routeName}"
+        },
+        {
+          "type": "stop",
+          "time": "11:30",
+          "duration": "45 min",
+          "category": "viewpoint",
+          "title": "Photo opportunity",
+          "description": "A perfect spot for memorable shots"
+        },
+        {
+          "type": "lunch",
+          "time": "12:30",
+          "duration": "1 hour",
+          "category": "local-flavor",
+          "title": "Local lunch spot",
+          "description": "Farm-to-table experience"
+        },
+        {
+          "type": "stop",
+          "time": "14:00",
+          "duration": "1 hour",
+          "category": "historic",
+          "title": "Historic site visit",
+          "description": "Step back in time"
+        },
+        {
+          "type": "drive",
+          "time": "15:30 - 17:00",
+          "title": "Afternoon drive",
+          "description": "Continue toward your evening stop"
+        },
+        {
+          "type": "arrival",
+          "time": "17:30",
+          "title": "Arrive at destination",
+          "description": "Check in and relax"
+        }
+      ]
+    },
+    {
+      "dayNumber": 2,
+      "theme": "Deep exploration",
+      "activities": [
+        {
+          "type": "breakfast",
+          "time": "08:00",
+          "title": "Morning meal",
+          "description": "Local breakfast recommendation"
+        },
+        {
+          "type": "stop",
+          "time": "09:30",
+          "duration": "2 hours",
+          "category": "nature",
+          "title": "Nature exploration",
+          "description": "Trail walk or scenic overlook"
+        },
+        {
+          "type": "drive",
+          "time": "12:00 - 13:00",
+          "title": "Midday drive",
+          "description": "Short transfer to next area"
+        },
+        {
+          "type": "lunch",
+          "time": "13:00",
+          "duration": "1 hour",
+          "category": "local-flavor",
+          "title": "Regional cuisine",
+          "description": "Taste the local specialties"
+        },
+        {
+          "type": "stop",
+          "time": "15:00",
+          "duration": "1.5 hours",
+          "category": "hidden-gem",
+          "title": "Hidden gem discovery",
+          "description": "Off-the-beaten-path stop"
+        },
+        {
+          "type": "dinner",
+          "time": "18:00",
+          "duration": "1.5 hours",
+          "category": "local-flavor",
+          "title": "Evening dining",
+          "description": "Sunset dinner with a view"
+        }
+      ]
+    },
+    {
+      "dayNumber": 3,
+      "theme": "Return journey",
+      "activities": [
+        {
+          "type": "breakfast",
+          "time": "08:30",
+          "title": "Leisurely breakfast",
+          "description": "Final morning in the area"
+        },
+        {
+          "type": "stop",
+          "time": "10:00",
+          "duration": "1 hour",
+          "category": "photo",
+          "title": "Last photo stop",
+          "description": "Capture final memories"
+        },
+        {
+          "type": "drive",
+          "time": "11:30 - 14:00",
+          "title": "Return drive",
+          "description": "Scenic route back to {endLocation}"
+        },
+        {
+          "type": "arrival",
+          "time": "14:30",
+          "title": "Journey complete",
+          "description": "Arrive at {endLocation}"
+        }
+      ]
+    }
+  ]
+}
