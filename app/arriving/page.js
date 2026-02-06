@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 
 import CTA from "@/components/wireframe/CTA";
 import Note from "@/components/wireframe/Note";
@@ -10,9 +7,8 @@ import Pill from "@/components/wireframe/Pill";
 import Row from "@/components/wireframe/Row";
 import TopBar from "@/components/wireframe/TopBar";
 
-export default function ArrivingPage() {
-  const searchParams = useSearchParams();
-  const tripId = searchParams?.get("tripId") || "";
+export default function ArrivingPage({ searchParams }) {
+  const tripId = typeof searchParams?.tripId === "string" ? searchParams.tripId : "";
 
   return (
     <main className="mx-auto flex min-h-screen max-w-5xl flex-col items-start gap-4 p-8">
